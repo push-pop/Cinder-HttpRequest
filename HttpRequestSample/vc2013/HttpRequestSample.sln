@@ -1,0 +1,20 @@
+
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "HttpRequestSample", "HttpRequestSample.vcxproj", "{F417DEA7-6593-4826-9C57-B4A4460CA08D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F417DEA7-6593-4826-9C57-B4A4460CA08D}.Debug|Win32.ActiveCfg = Debug|Win32
+		{F417DEA7-6593-4826-9C57-B4A4460CA08D}.Debug|Win32.Build.0 = Debug|Win32
+		{F417DEA7-6593-4826-9C57-B4A4460CA08D}.Release|Win32.ActiveCfg = Release|Win32
+		{F417DEA7-6593-4826-9C57-B4A4460CA08D}.Release|Win32.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
