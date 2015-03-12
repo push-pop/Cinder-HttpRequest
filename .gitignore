@@ -1,0 +1,86 @@
+#Autosave files
+*~
+
+log.txt
+
+
+# Build/test output
+obj
+bin
+test-results
+
+.*
+!.gitignore
+
+# VS sometimes writes these for no apparent reason
+_UpgradeReport_Files
+UpgradeLog.*
+
+# Per-user data
+*.DS_Store
+*.sln.cache
+*.suo
+*.userprefs
+*.usertasks
+*.user
+
+# ReSharper
+*_Resharper.*
+*.Resharper
+
+# dotCover
+*.dotCover
+
+# Mov files are too big
+*.mov
+
+#visual studio ignores
+*.aps
+*.ncs
+*.cachefile
+*.sdf
+*.opensdf
+*.suo
+*.user
+*.usersosscache
+*.sln.docstates
+
+*.userprefs
+
+[Dd]ebug/
+[Rr]elease/
+x64/
+x86/
+nuild/
+[Bb]in/
+[Oo]bj/
+
+*_i.c
+*_p.c
+*_i.h
+*.ilk
+*.meta
+*.obj
+*.pch
+*.pdb
+*.pgc
+*.pgd
+*.rsp
+*.sbr
+*.tlb
+*.tli
+*.tlh
+*.tmp
+*.tmp_proj
+*.log
+*.vspscc
+*.vsssvv
+.builds
+*.pidb
+*.svclog
+*.scc
+
+
+*.psess
+*.vsp
+*.vspx
