@@ -1,12 +1,13 @@
-#include "cinder/app/AppNative.h"
-#include "cinder/app/RendererGl.h"
-#include "cinder/gl/gl.h"
+#include "HttpRequest.h"
 
+#include "cinder/app/AppNative.h"
+#include "cinder/gl/gl.h"
+#include "cinder/app/RendererGl.h"
 #include "cinder/params/Params.h"
 #include "cinder/Text.h"
 #include "cinder/Font.h"
 #include "cinder/gl/Texture.h"
-#include "HttpRequest.h"
+
 
 using namespace ci;
 using namespace ci::app;
