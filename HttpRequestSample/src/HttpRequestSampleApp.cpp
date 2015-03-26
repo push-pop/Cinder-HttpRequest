@@ -6,6 +6,7 @@
 #include "cinder/params/Params.h"
 #include "cinder/Text.h"
 #include "cinder/Font.h"
+#include "cinder/gl/TextureFont.h"
 #include "cinder/gl/Texture.h"
 
 
@@ -30,6 +31,7 @@ class HttpRequestSampleApp : public AppNative {
     params::InterfaceGlRef  params;
 
     ci::gl::TextureRef mTextTexture;
+	ci::gl::TextureFontRef mTexFont;
     ci::Font mFont;
     
     int mNumParams;
@@ -38,12 +40,14 @@ class HttpRequestSampleApp : public AppNative {
     std::string mEndpt;
     
     std::string mReqBody;
-    
+	std::string mResponse;
 };
 
 void HttpRequestSampleApp::setup()
 {
     
+	mResponse = "HTTP Request Test App";
+
     mHost = "www.httpbin.org";
     mEndpt = "/get";
     mReqBody = "{ \"key\": \"value\"} ";
@@ -74,10 +78,10 @@ void HttpRequestSampleApp::setup()
 #if defined(CINDER_COCOA)
     mFont = Font("Cochin-Italic",14);
 #else
-    mFont = Font("Times new Roman", 14);
+    mFont = Font("Times New Roman", 18);
 #endif
     
-
+	mTexFont = gl::TextureFont::create(mFont);
 }
 
 void HttpRequestSampleApp::mouseDown( MouseEvent event )
@@ -96,8 +100,12 @@ void HttpRequestSampleApp::draw()
 	gl::clear( Color( 0, 0, 0 ) );
     
     params->draw();
-  if(mTextTexture)
-    gl::draw(mTextTexture, vec2(300, 0));
+
+	Rectf boundsRect(300, mTexFont->getAscent() + 40, getWindowWidth() - 40, getWindowHeight() - 40);
+	gl::color(ColorA(1, 0.5f, 0.25f, 1.0f));
+
+	mTexFont->drawStringWrapped(mResponse, boundsRect);
+
 
     
     
@@ -162,9 +170,8 @@ void HttpRequestSampleApp::performDELETE()
 
 void HttpRequestSampleApp::renderText(std::string s)
 {
-    
-    TextBox textBox = TextBox().size(vec2(300,TextBox::GROW)).text(s);
-    mTextTexture = gl::Texture::create( textBox.render());
+
+	mResponse = s;
 }
 
 
