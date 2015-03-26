@@ -11,12 +11,13 @@ request, close the socket connection and destroy the object which is
 nice for prototyping quick API REST calls.
 
 The usage is like this:
-'''
+
+
     AsynHttpRequest::create(io_service(), hostname)->BeginPost( endpoint, data, [this](std::string resp){
 
 	}); 
 
-'''
+
 
 where 'io_service()' is from the Cinder app context, hostname is the address of the server, endpoint is the RESTful endpoint you are trying to hit. Data is a JsonTree.
 
